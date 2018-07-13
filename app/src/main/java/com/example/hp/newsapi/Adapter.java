@@ -43,6 +43,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     public void swap(ArrayList<News> newsArrayList) {
 
+        this.newsList = newsArrayList;
+
+        notifyDataSetChanged ();
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

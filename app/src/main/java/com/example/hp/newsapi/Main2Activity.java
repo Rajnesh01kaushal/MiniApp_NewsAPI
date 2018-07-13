@@ -51,7 +51,7 @@ public class Main2Activity extends AppCompatActivity {
         @Override
         protected Void doInBackground(Void... voids) {
 
-            String finalUrl = BASE_URL + id + "&apiKey=57e1226a0c39449aace56653a91866b4";
+            String finalUrl = BASE_URL+id+"&apiKey=57e1226a0c39449aace56653a91866b4";
 
             data = NetworkUtil.makeServiceCall (finalUrl);
 
@@ -61,7 +61,9 @@ public class Main2Activity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute (aVoid);
+
             ArrayList<News> newsArrayList = new ArrayList<> ();
+
             if (data == null) {
                 Toast.makeText (Main2Activity.this, "No data returned", Toast.LENGTH_SHORT).show ();
             } else {
