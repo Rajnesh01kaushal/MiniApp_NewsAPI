@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.networkutil.NetworkUtil;
@@ -27,6 +29,8 @@ public class Main2Activity extends AppCompatActivity {
     String data;
 
     Adapter adapter;
+    ProgressBar progressBar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,8 @@ public class Main2Activity extends AppCompatActivity {
 
         recyclerView = findViewById (R.id.detailList);
         recyclerView.setLayoutManager (new LinearLayoutManager (this));
+
+        progressBar = findViewById (R.id.progressBar2);
 
         Intent intent = getIntent ();
 
@@ -45,6 +51,8 @@ public class Main2Activity extends AppCompatActivity {
         new FetchNews ().execute ();
 
     }
+
+
 
     class FetchNews extends AsyncTask<Void, Void, Void> {
 
@@ -59,8 +67,16 @@ public class Main2Activity extends AppCompatActivity {
         }
 
         @Override
+        protected void onPreExecute() {
+            super.onPreExecute ();
+            progressBar.setVisibility (View.VISIBLE);
+        }
+
+        @Override
         protected void onPostExecute(Void aVoid) {
             super.onPostExecute (aVoid);
+            progressBar.setVisibility (View.INVISIBLE);
+
 
             ArrayList<News> newsArrayList = new ArrayList<> ();
 
@@ -89,6 +105,13 @@ public class Main2Activity extends AppCompatActivity {
             }
 
             adapter.swap (newsArrayList);
+
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+            super.onProgressUpdate (values);
+            progressBar.setProgress (0);
 
         }
     }

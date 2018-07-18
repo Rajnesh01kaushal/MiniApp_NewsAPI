@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NewsAPI</string>
+    <string name="app_name">NewsAPP</string>
     <string name="this_is_my_title">This is my title</string>
     <string name="this_is_my_description">This is my description</string>
     <string name="TODO">TODO</string>
