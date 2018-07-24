@@ -13,7 +13,7 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity implements ItemClick {
 
-    String[] channelID = {"abc-news", "the-times-of-india", "national-geographic", "google-news-in", "news24", "the-new-york-times"};
+    String[] channelID = {"abc-news", "the-times-of-india", "national-geographic", "google-news-in", "news24", "the-new-york-times","reddit-r-all","mtv-news","techcrunch-cn","financial-times","new-scientist"};
 
 
 //    ListView listView;

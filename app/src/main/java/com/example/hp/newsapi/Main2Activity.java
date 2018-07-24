@@ -19,7 +19,7 @@ import org.json.JSONObject;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class Main2Activity extends AppCompatActivity {
+public class Main2Activity extends AppCompatActivity  {
 
     RecyclerView recyclerView;
     String id;
@@ -30,6 +30,7 @@ public class Main2Activity extends AppCompatActivity {
 
     Adapter adapter;
     ProgressBar progressBar;
+
 
 
     @Override

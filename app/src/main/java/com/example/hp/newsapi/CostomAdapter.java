@@ -16,8 +16,8 @@ import java.util.ArrayList;
 
 public class CostomAdapter extends RecyclerView.Adapter<CostomAdapter.ViewHolder> {
 
-    String[] channelName = {"ABC News","The Times Of India","National Geographic","Google News (India)","News24","The New York Times"};
-    String[] channelType = {"General","General","General","General","General","General"};
+    String[] channelName = {"ABC News","The Times Of India","National Geographic","Google News (India)","News24","The New York Times","Reddit /r/all","MTV News","TechCrunch (CN)","Financial Times","New Scientist"};
+    String[] channelType = {"General","General","Science","General","General","General","General","Entertainment","Technology","Business","Science"};
 
 
     Context context;
@@ -55,18 +55,18 @@ public class CostomAdapter extends RecyclerView.Adapter<CostomAdapter.ViewHolder
 
         switch (position) {
             case 0:
-                Glide.with (context).load (R.drawable.abcnews).into (holder.imageView);
+                Glide.with (context).load (R.drawable.abnews).into (holder.imageView);
                 break;
 
             case 1:
-                Glide.with (context).load (R.drawable.toinews).into (holder.imageView);
+                Glide.with (context).load (R.drawable.timeoi).into (holder.imageView);
                 break;
             case 2:
                 Glide.with (context).load (R.drawable.ntnlgeo).into (holder.imageView);
                 break;
 
             case 3:
-                Glide.with (context).load (R.drawable.google).into (holder.imageView);
+                Glide.with (context).load (R.drawable.gle).into (holder.imageView);
                 break;
 
             case 4:
@@ -74,8 +74,29 @@ public class CostomAdapter extends RecyclerView.Adapter<CostomAdapter.ViewHolder
                 break;
 
             case 5:
-                Glide.with (context).load (R.drawable.newyork).into (holder.imageView);
+                Glide.with (context).load (R.drawable.neyrk).into (holder.imageView);
                 break;
+
+            case 6:
+                Glide.with (context).load (R.drawable.reddit).into (holder.imageView);
+                break;
+
+            case  7:
+                Glide.with (context).load (R.drawable.mtvnews).into (holder.imageView);
+                break;
+
+            case  8:
+                Glide.with (context).load (R.drawable.tech).into (holder.imageView);
+                break;
+
+            case  9:
+                Glide.with (context).load (R.drawable.finacialtime).into (holder.imageView);
+                break;
+
+            case  10:
+                Glide.with (context).load (R.drawable.newsci).into (holder.imageView);
+                break;
+
         }
 
 
